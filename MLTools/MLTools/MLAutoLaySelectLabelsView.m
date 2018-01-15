@@ -49,10 +49,15 @@
     CGFloat marginX = 15; //左右边距
     CGFloat gapY = 10; //垂直间隙
     
-    //以下两项可根据需求调整
-    CGFloat btnLabelMargin = GetLogicPixelX(8); //btn 内部文字label 距btn 边框的边距
-    CGFloat gapX = (SCREEN_WIDTH - GetLogicPixelX(24) * 4 - buttonW * 5 - marginX * 2)/4.0; //水平间隙(按 5个宽度为110px的按钮计算,可调整)
+    //以下两项可根据需求调整 (The two items below are adjustable to get the right UI)
+    //The gap between the edge of button and its label edge
+    CGFloat btnLabelMargin = GetLogicPixelX(10);
     
+    //水平间隙(按 5个宽度为110px的按钮计算,可调整)
+    //The gap between each button
+    CGFloat gapX = (SCREEN_WIDTH - GetLogicPixelX(20) * 4 - buttonW * 5 - marginX * 2)/4.0;
+    
+    //iPhone 5s 等小尺寸适配
     if (!CH_IPHONE6_OR_LATER) {
         btnLabelMargin = GetLogicPixelX(5);
         gapX = (SCREEN_WIDTH - GetLogicPixelX(24) * 4 - buttonW * 5 - marginX * 2)/4.0 ;
@@ -94,6 +99,8 @@
     }
 
 }
+
+
 
 - (void)buttonClick:(UIButton *)sender
 {
