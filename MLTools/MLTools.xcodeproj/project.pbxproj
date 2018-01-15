@@ -15,10 +15,10 @@
 		7C1C98F7200C576100F5FD15 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C1C98E8200C576100F5FD15 /* Main.storyboard */; };
 		7C1C98F8200C576100F5FD15 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7C1C98EA200C576100F5FD15 /* Info.plist */; };
 		7C1C98F9200C576100F5FD15 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C1C98EB200C576100F5FD15 /* main.m */; };
-		7C1C98FA200C576100F5FD15 /* MLAutoLaySelectLabelsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C1C98ED200C576100F5FD15 /* MLAutoLaySelectLabelsView.m */; };
 		7C1C98FB200C576100F5FD15 /* NSString+SizeFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C1C98EF200C576100F5FD15 /* NSString+SizeFormat.m */; };
 		7C1C98FC200C576100F5FD15 /* UIImage+SizeColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C1C98F1200C576100F5FD15 /* UIImage+SizeColor.m */; };
 		7C1C98FD200C576100F5FD15 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C1C98F3200C576100F5FD15 /* ViewController.m */; };
+		7C1C9901200CAEE500F5FD15 /* MLAutoLaySelectLabelsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C1C9900200CAEE500F5FD15 /* MLAutoLaySelectLabelsView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,14 +53,14 @@
 		7C1C98E9200C576100F5FD15 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7C1C98EA200C576100F5FD15 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7C1C98EB200C576100F5FD15 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		7C1C98EC200C576100F5FD15 /* MLAutoLaySelectLabelsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLAutoLaySelectLabelsView.h; sourceTree = "<group>"; };
-		7C1C98ED200C576100F5FD15 /* MLAutoLaySelectLabelsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLAutoLaySelectLabelsView.m; sourceTree = "<group>"; };
 		7C1C98EE200C576100F5FD15 /* NSString+SizeFormat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+SizeFormat.h"; sourceTree = "<group>"; };
 		7C1C98EF200C576100F5FD15 /* NSString+SizeFormat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+SizeFormat.m"; sourceTree = "<group>"; };
 		7C1C98F0200C576100F5FD15 /* UIImage+SizeColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+SizeColor.h"; sourceTree = "<group>"; };
 		7C1C98F1200C576100F5FD15 /* UIImage+SizeColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+SizeColor.m"; sourceTree = "<group>"; };
 		7C1C98F2200C576100F5FD15 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		7C1C98F3200C576100F5FD15 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		7C1C98FF200CAEE500F5FD15 /* MLAutoLaySelectLabelsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLAutoLaySelectLabelsView.h; sourceTree = "<group>"; };
+		7C1C9900200CAEE500F5FD15 /* MLAutoLaySelectLabelsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLAutoLaySelectLabelsView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,8 +136,7 @@
 				7C1C98E8200C576100F5FD15 /* Main.storyboard */,
 				7C1C98EA200C576100F5FD15 /* Info.plist */,
 				7C1C98EB200C576100F5FD15 /* main.m */,
-				7C1C98EC200C576100F5FD15 /* MLAutoLaySelectLabelsView.h */,
-				7C1C98ED200C576100F5FD15 /* MLAutoLaySelectLabelsView.m */,
+				7C1C98FE200CAEE500F5FD15 /* selectView */,
 				7C1C98EE200C576100F5FD15 /* NSString+SizeFormat.h */,
 				7C1C98EF200C576100F5FD15 /* NSString+SizeFormat.m */,
 				7C1C98F0200C576100F5FD15 /* UIImage+SizeColor.h */,
@@ -146,6 +145,15 @@
 				7C1C98F3200C576100F5FD15 /* ViewController.m */,
 			);
 			path = MLTools;
+			sourceTree = "<group>";
+		};
+		7C1C98FE200CAEE500F5FD15 /* selectView */ = {
+			isa = PBXGroup;
+			children = (
+				7C1C98FF200CAEE500F5FD15 /* MLAutoLaySelectLabelsView.h */,
+				7C1C9900200CAEE500F5FD15 /* MLAutoLaySelectLabelsView.m */,
+			);
+			path = selectView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -286,7 +294,7 @@
 				7C1C98FD200C576100F5FD15 /* ViewController.m in Sources */,
 				7C1C98FB200C576100F5FD15 /* NSString+SizeFormat.m in Sources */,
 				7C1C98F9200C576100F5FD15 /* main.m in Sources */,
-				7C1C98FA200C576100F5FD15 /* MLAutoLaySelectLabelsView.m in Sources */,
+				7C1C9901200CAEE500F5FD15 /* MLAutoLaySelectLabelsView.m in Sources */,
 				7C1C98F4200C576100F5FD15 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
