@@ -31,8 +31,8 @@
     
     MLAutoLaySelectLabelsView * selectView = [[MLAutoLaySelectLabelsView alloc]initWithFrame:CGRectMake(20, 200, SCREEN_WIDTH - 2 * 20, 100) items:items];
     
-    selectView.btnLabelMargin = GetLogicPixelX(100);
-    selectView.gapX  = 20;
+//    selectView.btnLabelMargin = GetLogicPixelX(100);
+//    selectView.gapX  = 20;
     
     [self.view addSubview:selectView];
 }

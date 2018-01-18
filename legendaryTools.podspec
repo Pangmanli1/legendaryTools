@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   s.platform     = :ios
   s.source       = { :git => "https://github.com/Pangmanli1/legendaryTools.git", :tag => "0.0.2" }
 
-  s.source_files  = "MLTools/MLTools/selectView/*.{h，m}"
+  s.source_files  = "MLTools/MLTools/MLAutoLaySelectLabelsView.h","MLTools/MLTools/MLAutoLaySelectLabelsView.m","MLTools/MLTools/NSString+SizeFormat.h","MLTools/MLTools/NSString+SizeFormat.m","MLTools/MLTools/UIImage+SizeColor.h","MLTools/MLTools/UIImage+SizeColor.m",
   s.requires_arc = true
 
-end
+ends

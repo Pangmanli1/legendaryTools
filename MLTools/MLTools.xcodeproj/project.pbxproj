@@ -136,7 +136,8 @@
 				7C1C98E8200C576100F5FD15 /* Main.storyboard */,
 				7C1C98EA200C576100F5FD15 /* Info.plist */,
 				7C1C98EB200C576100F5FD15 /* main.m */,
-				7C1C98FE200CAEE500F5FD15 /* selectView */,
+				7C1C98FF200CAEE500F5FD15 /* MLAutoLaySelectLabelsView.h */,
+				7C1C9900200CAEE500F5FD15 /* MLAutoLaySelectLabelsView.m */,
 				7C1C98EE200C576100F5FD15 /* NSString+SizeFormat.h */,
 				7C1C98EF200C576100F5FD15 /* NSString+SizeFormat.m */,
 				7C1C98F0200C576100F5FD15 /* UIImage+SizeColor.h */,
@@ -145,15 +146,6 @@
 				7C1C98F3200C576100F5FD15 /* ViewController.m */,
 			);
 			path = MLTools;
-			sourceTree = "<group>";
-		};
-		7C1C98FE200CAEE500F5FD15 /* selectView */ = {
-			isa = PBXGroup;
-			children = (
-				7C1C98FF200CAEE500F5FD15 /* MLAutoLaySelectLabelsView.h */,
-				7C1C9900200CAEE500F5FD15 /* MLAutoLaySelectLabelsView.m */,
-			);
-			path = selectView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -461,6 +453,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ATVKY62WDP;
 				INFOPLIST_FILE = MLTools/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.CIGNA-CMB.PerfectLife.MLTools";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -475,6 +468,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ATVKY62WDP;
 				INFOPLIST_FILE = MLTools/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.CIGNA-CMB.PerfectLife.MLTools";
 				PRODUCT_NAME = "$(TARGET_NAME)";
