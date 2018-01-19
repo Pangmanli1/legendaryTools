@@ -15,6 +15,7 @@ Pod::Spec.new do |s|
   s.social_media_url   = "https://weibo.com/u/2145247131"
 
   s.platform     = :ios
+  s.ios.deployment_target = '9.0'
   s.source       = { :git => "https://github.com/Pangmanli1/legendaryTools.git", :tag => "0.0.1" }
 
   s.source_files  = 'MLTools/MLTools/Tools/*.{h,m}'
