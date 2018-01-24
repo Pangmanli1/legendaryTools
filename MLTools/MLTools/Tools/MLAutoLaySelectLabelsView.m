@@ -104,12 +104,13 @@
 
 - (void)buttonClick:(UIButton *)sender
 {
-    if ([self.selectedButton isEqual:sender]) {
-        return;
-    }
-    
-    self.selectedButton.selected = NO;
-    self.selectedButton = sender;
+//打开注释支持单选
+//    if ([self.selectedButton isEqual:sender]) {
+//        return;
+//    }
+//
+//    self.selectedButton.selected = NO;
+//    self.selectedButton = sender;
     
     if ([_delegate respondsToSelector:@selector(itemSelectViewWithButton:didSelectIndex:)]) {
         [_delegate itemSelectViewWithButton:self.selectedButton didSelectIndex:sender.tag];
