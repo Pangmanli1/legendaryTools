@@ -35,32 +35,40 @@
         return;
     }
     
+    CGFloat marginX = 20; //左右边距
+    CGFloat width = CGRectGetWidth(self.frame);
+    CGFloat height = CGRectGetHeight(self.frame);
+    
     UILabel *titleLabel = [[UILabel alloc] init];
     titleLabel.text = @"APP问题反馈";
     titleLabel.textColor = COLOR(0x33, 0x33, 0x33, 1.0);
     titleLabel.font = [UIFont boldSystemFontOfSize:14];
-    titleLabel.frame = CGRectMake(15, 0, 100, 16);
+    titleLabel.frame = CGRectMake(marginX, 0, 100, 16);
     [self addSubview:titleLabel];
     
     CGFloat buttonW = GetLogicPixelX(110); //预设初始值 ,循环创建时根据字长重设
     CGFloat buttonH = 33;
     CGFloat buttonX = 15; //button 的X 坐标值
-    CGFloat buttonY = CGRectGetMaxY(titleLabel.frame)+15;
-    CGFloat marginX = 15; //左右边距
+    CGFloat buttonY = CGRectGetMaxY(titleLabel.frame) + 10;
     CGFloat gapY = 10; //垂直间隙
+    
+    UIScrollView * scrollView = [[UIScrollView alloc]initWithFrame:CGRectMake(0, buttonY , width, height - buttonY )];
+    scrollView.showsVerticalScrollIndicator = NO;
+    [self addSubview: scrollView];
     
     //以下两项可根据需求调整 (The two items below are adjustable to get the right UI)
     //The gap between the edge of button and its label edge
     CGFloat btnLabelMargin = GetLogicPixelX(10);
     
-    //水平间隙(按 5个宽度为110px的按钮计算,可调整)
+    //水平间隙
     //The gap between each button
-    CGFloat gapX = (SCREEN_WIDTH - GetLogicPixelX(20) * 4 - buttonW * 5 - marginX * 2)/4.0;
+//    CGFloat gapX = ( width - GetLogicPixelX(20) * 4 - buttonW * 5 - marginX * 2) > 0 ?( width - GetLogicPixelX(20) * 4 - buttonW * 5 - marginX * 2)/4.0 : 6; //(按 5个宽度为110px的按钮计算,可调整)
+    CGFloat gapX = 6;
     
     //iPhone 5s 等小尺寸适配
     if (!CH_IPHONE6_OR_LATER) {
         btnLabelMargin = GetLogicPixelX(5);
-        gapX = (SCREEN_WIDTH - GetLogicPixelX(24) * 4 - buttonW * 5 - marginX * 2)/4.0 ;
+//        gapX = (width - GetLogicPixelX(24) * 4 - buttonW * 5 - marginX * 2)/4.0 ;
     }
     for (int index = 0; index < items.count; index ++) {
         NSString * title = items[index];
@@ -75,7 +83,7 @@
         [button setBackgroundImage:[UIImage createImageWithColor:COLOR(0xf5, 0xf5, 0xf5, 1.0)] forState:UIControlStateNormal];
         
         //处理换行(值考虑两行以下的情况)
-        if ((CGRectGetMaxX(button.frame) - marginX)> self.frame.size.width ) {
+        if (CGRectGetMaxX(button.frame) > self.frame.size.width ) {
             buttonY += gapY + buttonH;
             buttonX = 15;
             button.frame = CGRectMake(buttonX, buttonY, buttonW, buttonH);
@@ -89,7 +97,7 @@
         [button addTarget:self action:@selector(buttonClick:) forControlEvents:UIControlEventTouchUpInside];
         button.titleLabel.font = [UIFont systemFontOfSize:12];
         button.tag = index+5;
-        [self addSubview:button];
+        [scrollView addSubview:button];
         buttonX += buttonW + gapX;
     }
     
@@ -97,7 +105,8 @@
     if (buttonY > CGRectGetMaxY(titleLabel.frame)+15 ) {
         self.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y, self.frame.size.width, buttonY + buttonH);
     }
-
+    
+    scrollView.contentSize = CGSizeMake(width, CGRectGetHeight(self.frame) - CGRectGetMaxY(titleLabel.frame) - 10 + 50 );
 }
 
 
@@ -112,8 +121,8 @@
 //    self.selectedButton.selected = NO;
 //    self.selectedButton = sender;
     
-    if ([_delegate respondsToSelector:@selector(itemSelectViewWithButton:didSelectIndex:)]) {
-        [_delegate itemSelectViewWithButton:self.selectedButton didSelectIndex:sender.tag];
+    if ([_myDelegate respondsToSelector:@selector(itemSelectViewWithButton:didSelectIndex:)]) {
+        [_myDelegate itemSelectViewWithButton:self.selectedButton didSelectIndex:sender.tag];
     }
     
     sender.selected = YES;
