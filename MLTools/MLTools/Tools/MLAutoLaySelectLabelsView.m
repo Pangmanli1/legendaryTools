@@ -121,8 +121,8 @@
 //    self.selectedButton.selected = NO;
 //    self.selectedButton = sender;
     
-    if ([_myDelegate respondsToSelector:@selector(itemSelectViewWithButton:didSelectIndex:)]) {
-        [_myDelegate itemSelectViewWithButton:self.selectedButton didSelectIndex:sender.tag];
+    if ([_delegate respondsToSelector:@selector(itemSelectViewWithButton:didSelectIndex:)]) {
+        [_delegate itemSelectViewWithButton:self.selectedButton didSelectIndex:sender.tag];
     }
     
     sender.selected = YES;
