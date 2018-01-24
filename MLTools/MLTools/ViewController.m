@@ -27,7 +27,7 @@
     [super viewDidLoad];
     self.view.backgroundColor = COLOR(252, 157, 154, 1.0);
     
-    NSArray * items = @[@"问题优化",@"bug", @"积分相关",@"信息安全问题",@"提现困难", @"如何使用积分帮助"];
+    NSArray * items = @[@"问题优化",@"bug", @"积分相关",@"信息安全问题",@"提现困难", @"如何使用积分帮助",@"问题优化",@"bug", @"积分相关",@"信息安全问题",@"提现困难", @"如何使用积分帮助"];
     
     MLAutoLaySelectLabelsView * selectView = [[MLAutoLaySelectLabelsView alloc]initWithFrame:CGRectMake(20, 200, SCREEN_WIDTH - 2 * 20, 100) items:items];
     

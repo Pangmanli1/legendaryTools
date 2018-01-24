@@ -75,7 +75,7 @@
         [button setBackgroundImage:[UIImage createImageWithColor:COLOR(0xf5, 0xf5, 0xf5, 1.0)] forState:UIControlStateNormal];
         
         //处理换行(值考虑两行以下的情况)
-        if (CGRectGetMaxX(button.frame) + marginX > self.frame.size.width) {
+        if ((CGRectGetMaxX(button.frame) - marginX)> self.frame.size.width ) {
             buttonY += gapY + buttonH;
             buttonX = 15;
             button.frame = CGRectMake(buttonX, buttonY, buttonW, buttonH);
